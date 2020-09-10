@@ -33749,10 +33749,7 @@
                               <div class="carousel-inner">
                                 <div class="item active">
                                   <div class="carousel-image-wrapper">
-                                    <img
-                                      src="imgs/a7uqfieah5kx0ofqp8ua.jpg"
-                                      alt="Media"
-                                    />
+                                    <img src="imgs/OG.jpg" alt="Media" />
                                   </div>
                                 </div>
                               </div>
@@ -33785,7 +33782,14 @@
                             display: none;
                           "
                         >
-                          <div style="position: relative">
+                          <div
+                            style="
+                              position: relative;
+                              overflow: hidden;
+                              display: flex;
+                              align-items: center;
+                            "
+                          >
                             <a
                               id="effect"
                               style="
@@ -33804,14 +33808,59 @@
                               >Create Ad</a
                             >
 
+                            <div
+                              id="ratios"
+                              style="
+                                display: none;
+                                position: absolute;
+                                bottom: 25px;
+                                right: 25px;
+                              "
+                            >
+                            <a
+                            id="ratio-9"
+                            style="
+                              display: inline-flex;
+                              align-items: center;
+                              justify-content: center;
+                              width: 50px;
+                              height: 50px;
+                              background: white;
+                            "
+                            ><img src="imgs/Icons/9_16.svg"
+                          /></a>
+                          <a
+                                id="ratio-16"
+                                style="
+                                  display: inline-flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  width: 50px;
+                                  height: 50px;
+                                  background: white;
+                                  opacity: .8;
+                                "
+                                ><img src="imgs/Icons/16_9.svg"
+                              /></a>
+                              <a
+                                id="ratio-1"
+                                style="
+                                  display: inline-flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  width: 50px;
+                                  height: 50px;
+                                  background: white;
+                                  opacity: .8;
+                                "
+                                ><img src="imgs/Icons/1_1.svg"
+                              /></a>
+                            </div>
+
                             <img
                               id="champers"
-                              style="
-                                height: 100%;
-                                object-fit: cover;
-                                width: 467px;
-                              "
-                              src="imgs/a7uqfieah5kx0ofqp8ua.jpg"
+                              style="width: 467px"
+                              src="imgs/OG.jpg"
                             />
                           </div>
 
@@ -34328,122 +34377,43 @@
         var deliverable = document.getElementById("deliverablePopout");
         var popover = document.getElementById("popover");
         var effectBtn = document.getElementById("effect");
+        var ratiosWrapper = document.getElementById("ratios");
         var img = document.getElementById("champers");
+        var ratio1 = document.getElementById("ratio-1");
+        var ratio9 = document.getElementById("ratio-9");
+        var ratio16 = document.getElementById("ratio-16");
 
         deliverable.addEventListener("click", () => {
           popover.style.display = "inline-flex";
         });
 
-        effect.addEventListener("click", () => {
-          console.log("hit");
-          img.setAttribute("src", "imgs/File-from-iOS.gif");
+        effectBtn.addEventListener("click", () => {
+          effectBtn.style.display = "none";
+          ratiosWrapper.style.display = "inline-block";
+          img.setAttribute("src", "imgs/Effects/nineBySisteen.gif");
+        });
+
+        ratio1.addEventListener("click", () => {
+          img.setAttribute("src", "imgs/Effects/oneByOne.gif");
+          ratio1.styles.opacity = 1;
+          ratio9.styles.opacity = .8;
+          ratio16.styles.opacity = .8;
+        });
+
+        ratio9.addEventListener("click", () => {
+          img.setAttribute("src", "imgs/Effects/nineBySisteen.gif");
+          ratio9.styles.opactiy = 1;
+          ratio1.styles.opactiy = .8;
+          ratio16.styles.opactiy = .8;
+        });
+
+        ratio16.addEventListener("click", () => {
+          img.setAttribute("src", "imgs/Effects/sixteenByNine.gif");
+          ratio16.style.opacity = 1;
+          ratio1.style.opacity = .8;
+          ratio9.style.opacity = .8;
         });
       })();
     </script>
-
-    <iframe
-      frameborder="0"
-      allowtransparency="true"
-      scrolling="no"
-      name="__privateStripeMetricsController0"
-      allowpaymentrequest="true"
-      src="https://js.stripe.com/v3/m-outer-93be17fde268c6ff50c5aed9122214d2.html#url=http%3A%2F%2Flocalhost%3A3000%2Fdashboard&amp;title=Dashboard&amp;referrer=http%3A%2F%2Flocalhost%3A3000%2Fdashboard&amp;muid=NA&amp;sid=NA&amp;version=6&amp;preview=false&amp;metaReferrerPolicy=unsafe-url"
-      aria-hidden="true"
-      tabindex="-1"
-      style="
-        border: none !important;
-        margin: 0px !important;
-        padding: 0px !important;
-        width: 1px !important;
-        min-width: 100% !important;
-        overflow: hidden !important;
-        display: block !important;
-        visibility: hidden !important;
-        position: fixed !important;
-        height: 1px !important;
-        pointer-events: none !important;
-        user-select: none !important;
-      "
-    ></iframe
-    ><iframe
-      data-product="web_widget"
-      title="No content"
-      tabindex="-1"
-      aria-hidden="true"
-      src="about:blank"
-      style="
-        width: 0px;
-        height: 0px;
-        border: 0px;
-        position: absolute;
-        top: -9999px;
-      "
-    ></iframe
-    ><iframe
-      frameborder="0"
-      allowtransparency="true"
-      scrolling="no"
-      name="__privateStripeController1"
-      allowpaymentrequest="true"
-      src="https://js.stripe.com/v3/controller-31df7bc37bccdb408fd9d9480f16e3cf.html#apiKey=pk_test_3Lu2HjAFFHnabmjUklrX5ucu&amp;stripeJsId=47af2eeb-cafb-4fa6-85af-bf8a39a60ec4&amp;startTime=1599623474123&amp;origin=http%3A%2F%2Flocalhost%3A3000&amp;referrer=http%3A%2F%2Flocalhost%3A3000%2Fdashboard&amp;controllerId=__privateStripeController1"
-      aria-hidden="true"
-      tabindex="-1"
-      style="
-        border: none !important;
-        margin: 0px !important;
-        padding: 0px !important;
-        width: 1px !important;
-        min-width: 100% !important;
-        overflow: hidden !important;
-        display: block !important;
-        visibility: hidden !important;
-        position: fixed !important;
-        height: 1px !important;
-        pointer-events: none !important;
-        user-select: none !important;
-      "
-    ></iframe>
-    <div>
-      <iframe
-        title="Opens a widget where you can find more information"
-        id="launcher"
-        tabindex="0"
-        style="
-          width: 108px;
-          height: 50px;
-          padding: 0px;
-          margin: 10px 20px;
-          position: fixed;
-          bottom: 0px;
-          right: 0px;
-          overflow: visible;
-          opacity: 1;
-          border: 0px;
-          z-index: 999998;
-          transition-duration: 250ms;
-          transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-          transition-property: opacity, top, bottom;
-        "
-      ></iframe
-      ><iframe
-        title="Find more information here"
-        id="webWidget"
-        tabindex="-1"
-        style="
-          width: 374px;
-          max-height: calc(100vh - 32px);
-          height: 572px;
-          position: fixed;
-          opacity: 0;
-          border: 0px;
-          transition-duration: 250ms;
-          transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
-          transition-property: opacity, top, bottom;
-          top: -9999px;
-          visibility: hidden;
-          z-index: 999999;
-        "
-      ></iframe>
-    </div>
   </body>
 </html>
